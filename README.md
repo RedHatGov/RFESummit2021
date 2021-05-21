@@ -119,7 +119,7 @@ the image. You should download a image that's just over 600 MiB in
 size. Expand that image and take a look at the metadata using:
 
     tar xf *.tar
-    jq '.' compose.json
+    jq '."ostree-commit"' compose.json
 
 The `jq` command formats the JSON file to be more human-readable.
 There are several values of note here including the `ostree-commit`
@@ -140,7 +140,7 @@ can designate this compose as the parent to our next build. If you
 need to view the `compose.json` file again to get this value, simply
 type:
 
-    jq '.' compose.json
+    jq '."ostree-commit"' compose.json
 
 ### Compose an operating system image upgrade using the web console
 Create the second image using the web console. Browse to
